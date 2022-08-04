@@ -1,1 +1,1 @@
-# OelloStore
+#Nordic HTML E-commerce Store with Tailwind CSS

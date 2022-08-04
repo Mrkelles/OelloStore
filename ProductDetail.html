@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PRODUCT-PAGE</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <div class="menu-toggle navbar-item">
+          <div class="hamburger">
+            <button onclick="history.back()">Go Back</button>
+          </div>
+        </div>
+        <div class="site-logo">Power Solutions</div>
+        <div class="menu-cart navbar-item">Inquiries?</div>
+      </div>
+      <div class="product-wrapper">
+        <div class="product-img">
+          <img src="1 (7).jpg" alt="" />
+        </div>
+        <div class="product-info">
+          <div class="product-description">
+            <div class="product-title">Yoobao 48,000mah Car Jump Starter</div>
+            <div class="product-price">N100,000</div>
+            <div class="product-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum commodi, adipisci explicabo in ea, eum necessitatibus exercitationem sunt id suscipit dignissimos corrupti similique velit voluptate! Veritatis quibusdam autem ea error?</div>
+
+          </div>
+          <div class="product-add-to-cart">BUY NOW</div>
+        </div>
+      </div>
+    </div>
+    <script>
+      gsap.from(".navbar", 2, { y: -100, ease: Expo.easeInOut });
+      gsap.from(".product-info", 4, { x: 600, ease: Expo.easeInOut });
+      gsap.from(".product-img", 4, { y: 600, ease: Expo.easeInOut });
+      gsap.from(".product-add-to-cart", 2, {
+        oapcity: 0,
+        y: 600,
+        ease: Expo.easeInOut,
+        delay: 2.4,
+      });
+      TweenMax.staggerFrom(
+        ".product-description > div",
+        3,
+        { opacity: 0, x: 200, ease: Expo.easeInOut, delay: 1.4 },
+        0.08
+      );
+    </script>
+  </body>
+</html>
